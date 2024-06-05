@@ -555,6 +555,16 @@ right: -20px;}
 
 .terms_content_wrapper .about_left_text h3{font-size: 28px;line-height: 106%;}
 
+.subscription_container{padding: 192px 32px 140px 32px;}
+
+.subscription_content{padding-left: 10.5px;padding-right: 10.5px;margin-top: 36px;}
+
+.subscription_heading h2{font-size: 44px;line-height: 120%;}
+
+.subscription_heading p{white-space: nowrap;}
+
+.subscription_form{padding: 32px 24px;}
+
 }
 
 /*  Resolutions below 991px  */

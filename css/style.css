@@ -2516,14 +2516,127 @@
 
    .subscription_wrapper{
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh + 48px);
     background: #1E4854;
-    float: left;
    }
 
    .subscription_container{
-    margin-top: 190px;
-    margin-bottom: 140px;
+    padding: 192px 100px 140px 100px;
    }
+
+   .subscription_content{
+    padding-left: 52px;
+    padding-right: 0px;
+   }
+
+   .subscription_heading h2{
+    color: var(--color-white);
+    font-family: var(--gambarino-400-font);
+    font-size: 60px;
+    line-height: 116%;
+    margin-bottom: 24px;
+   }
+
+   .subscription_heading p{
+    color: var(--color-white);
+    font-size: 20px;
+    line-height: 130%;
+   }
+
+   .subscription_form{
+    width: 100%;
+    padding: 56px;
+    border-radius: 24px;
+    background: #9FE2D9;
+   }
+
+   .subscription_form .row{
+    margin-left: -8px;
+    margin-right: -8px;
+   }
+
+   .subscription_form .row .col-lg-12,.subscription_form .row .col-lg-6{
+    padding-left: 8px;
+    padding-right: 8px;
+   }
+
+   .subscription_form .form_field{
+    margin-bottom: 24px;
+    width: 100%;
+    float: left;
+    position: relative;
+   }
+
+   .subscription_form .form_field label{
+    color: rgba(34, 34, 34, 0.60);
+    font-size: 14px;
+    font-family: var(--satoshi-700-font);
+    line-height: 130%;
+    width: 100%;
+    float: left;
+    margin-bottom: 6px;
+  }
+
+  .subscription_form .form_field label sup{
+    color: #474747;
+  }
+
+  .subscription_form .form_field input.error{
+    border: 1px solid #f70505;
+  }
+
+  .subscription_form .form_field textarea.error{
+    border: 1px solid #f70505;
+  }
+
+  .subscription_form .form_field label.error{
+    font-size: 12px;
+    color: #f95353;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -25px;
+    text-align: left;
+    line-height: initial;
+  }
+
+  .subscription_form .form_field input,.subscription_form .form_field select{
+    border-radius: 8px;
+    border: 1px solid rgba(30, 72, 84, 0.40);
+    background: #FFF;
+    padding: 16px 12px;
+    color: rgba(34, 34, 34, 0.60);
+    font-size: 16px;
+    line-height: 130%;
+    width: 100%;
+    float: left;
+    font-family: var(--satoshi-400-font);
+  }
+
+  .subscription_form .form_field select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--color-white);
+    background-image: url("../img/chevron-down-icon.svg");
+    background-repeat: no-repeat;
+    background-position-x: 96%;
+    background-position-y: 50%;
+  }
+
+  .subscribe-btn button{
+    display: flex;
+    padding: 10px 16px 10px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 36px;
+    background: linear-gradient(90deg, #4A7F8E 0%, #1E4854 100%);
+    color: #FFF;
+    text-align: center;
+    font-family: var(--generalsans-500-font);
+    font-size: 16px;
+    line-height: 116%;
+    margin-top: 10px;
+    position: relative;
+  }
 
    /* end of subscription page styles */
