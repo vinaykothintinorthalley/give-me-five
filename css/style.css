@@ -317,6 +317,7 @@
   }
 
   .navbar-expand-lg .navbar-nav .dropdown-menu{
+    min-width: 160px;
     width: 100%;
     border: none;
     box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
@@ -1470,6 +1471,7 @@
     font-size: 20px;
     line-height: 130%;
     margin-bottom: 24px;
+    width: 500px;
   }
 
   .about_left_text a{
@@ -2074,7 +2076,7 @@
   .case_details_wrapper{
     background: url(../img/foyer-central-banner-img.jpg) no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 80px;
   }
 
   .case_details_heading{

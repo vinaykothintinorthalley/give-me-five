@@ -303,6 +303,8 @@ right: -20px;}
 
 .about_left_text{display: flex;order: 2;flex-direction: column;align-items: flex-start;}
 
+.about_left_text p{width: 100%;}
+
 .about_right_text{padding-left: 10.5px;display: flex;order: 1;}
 
 .about_left_text{padding-top: 36px;}
@@ -442,7 +444,7 @@ right: -20px;}
 .inner_faq_wrapper{border-radius: 16px;background: var(--color-white);margin-top: -40px;padding-bottom: 50px;}
 
 .case_details_wrapper {background: url(../img/foyer-central-banner-mobile-img.jpg) no-repeat;background-size: cover;
-    background-position: 50% 50%;}
+    background-position: 50% 80px;}
 
 .case_details_heading{flex-direction: column;width: calc(100% - 72px);left: 36px;}
 
