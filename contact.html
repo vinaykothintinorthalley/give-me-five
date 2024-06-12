@@ -55,8 +55,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="case-studies.html">Case Studies</a>
                             </li>
-                            <li class="nav-item d-none">
-                                <a class="nav-link" href="javascript:void(0);">Contact</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">Contact</a>
                             </li>
                         </ul>
                         <button type="button" class="schedule-btn">Schedule Demo</button>
@@ -74,81 +77,87 @@
                     </div>
                     <div class="col-lg-8 subscription_content">
                         <div class="subscription_form">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form_field">
-                                        <label>Subscriber Organization <sup>*</sup></label>
-                                        <input type="text" placeholder="Enter organization name">
+                            <form class="contact2-form validate-form" onsubmit="return false" novalidate="novalidate" action="#" method="post" name="subscriptionForm" id="subscriptionForm">  
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form_field">
+                                            <label>Subscriber Organization <sup>*</sup></label>
+                                            <input type="text" placeholder="Enter organization name" autocomplete="off" class="input2"  name="subscriber_organization" id="subscriber_organization">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form_field">
-                                        <label>Address <sup>*</sup></label>
-                                        <input type="text" placeholder="Enter address">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form_field">
+                                            <label>Address <sup>*</sup></label>
+                                            <input type="text" placeholder="Enter address" autocomplete="off" class="input2"  name="address" id="address">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form_field">
-                                        <label>Telephone Number <sup>*</sup></label>
-                                        <input type="text" placeholder="Enter telephone number">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form_field">
+                                            <label>Telephone Number <sup>*</sup></label>
+                                            <input type="text" placeholder="Enter telephone number" autocomplete="off" class="input2"  name="telephone_number" id="telephone_number">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form_field">
+                                            <label>Administrator Details<sup>*</sup></label>
+                                            <input type="text" placeholder="Enter administrator name" autocomplete="off" class="input2"  name="administrator_details" id="administrator_details">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="form_field">
-                                        <label>Administrator Details<sup>*</sup></label>
-                                        <input type="text" placeholder="Enter administrator name">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form_field">
+                                            <label>Admin Email <sup>*</sup></label>
+                                            <input type="text" placeholder="Enter admin email" autocomplete="off" class="input2"  name="admin_email" id="admin_email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form_field">
+                                            <label>Admin Phone Number <sup>*</sup></label>
+                                            <input type="text" placeholder="Enter admin phone number" autocomplete="off" class="input2"  name="admin_phone" id="admin_phone">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form_field">
-                                        <label>Admin Email <sup>*</sup></label>
-                                        <input type="text" placeholder="Enter admin email">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form_field">
+                                            <label>No of Participants/ clients/ students/ patients <sup>*</sup></label>
+                                            <input type="text" placeholder="Enter No(s)" class="input2" autocomplete="off" name="no_of_participants" id="no_of_participants">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form_field">
+                                            <label>Implementation Package <sup>*</sup></label>
+                                            <select class="input2"  name="implementation_package" id="implementation_package">
+                                                <option value="">Select Package</option>
+                                                <option value="Self-service + remote onboarding">Self-service + remote onboarding</option>
+                                                <option value="Specialist consultation">Specialist consultation</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="form_field">
-                                        <label>Admin Phone Number <sup>*</sup></label>
-                                        <input type="text" placeholder="Enter admin phone number">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="subscribe-btn">
+                                            <button type="submit" class="submit-btn">
+                                                Submit
+                                                <span class="submit_loader" style="display: none;"></span>
+                                                <img src="img/arrow-right-icon.svg" alt="">
+                                            </button>
+                                            <div id="success" class="success-message">
+                                                Your message successfully sent!
+                                            </div>
+                                            <div id="error" class="error-message">
+                                                Sorry, there must be something wrong!! Please try again.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form_field">
-                                        <label>No of Participants/ clients/ students/ patients <sup>*</sup></label>
-                                        <input type="text" placeholder="Enter No(s)">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form_field">
-                                        <label>Implementation Package <sup>*</sup></label>
-                                        <select>
-                                            <option>Select Package</option>
-                                            <option>Schools or Colleges</option>
-                                            <option>Workplace + EAPS</option>
-                                            <option>Specialist cohorts (Small)</option>
-                                            <option>Specialist cohorts (Medium)</option>
-                                            <option>Specialist cohorts (Large)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="subscribe-btn">
-                                        <button type="submit">
-                                            Submit
-                                            <img src="img/arrow-right-icon.svg" alt="">
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
