@@ -50,21 +50,37 @@ $mail->MsgHTML($body);
 
 
 $mail1 = new PHPMailer(); // defaults to using php "mail()"
-//Sent to Support
-$body1  = "<p>Subscriber Organization  : ".$subscriber_organization."</p>";
-$body1  = "<p>Address : ".$address."</p>";
-$body1  = "<p>Telephone Number : ".$telephone_number."</p>";
-$body1  = "<p>Administrator Details : ".$administrator_details."</p>";
-$body1  = "<p>Admin Email : ".$admin_email."</p>";
-$body1  = "<p>Admin Phone Number : ".$admin_phone."</p>";
-$body1  = "<p>No of Participants : ".$no_of_participants."</p>";
-$body1  = "<p>Implementation Package : ".$implementation_package."</p>";
-//$body1  = eregi_replace("[\]",'',$body1);
+
+$subscriberorganization = htmlspecialchars($_POST['subscriber_organization']);
+$address = htmlspecialchars($_POST['address']);
+$telephonenumber = htmlspecialchars($_POST['telephone_number']);
+$administratordetails =  $_POST['administrator_details'];
+$adminemail =  $_POST['admin_email'];
+$adminphone =  $_POST['admin_phone'];
+$noofparticipants =  $_POST['no_of_participants'];
+$implementationpackage =  $_POST['implementation_package'];
+//Sent to Admin    
+$body1 = file_get_contents('subsription_admin_template.html');
+//$body = eregi_replace("[\]",'',$body);
+
+// Replace placeholders with actual data
+$body1 = str_replace('{{subscriberorganization}}', $subscriberorganization, $body1);
+$body1 = str_replace('{{address}}', $address, $body1);
+$body1 = str_replace('{{telephonenumber}}', $telephonenumber, $body1);
+$body1 = str_replace('{{administratordetails}}', $administratordetails, $body1);
+$body1 = str_replace('{{adminemail}}', $adminemail, $body1);
+$body1 = str_replace('{{adminphone}}', $adminphone, $body1);
+$body1 = str_replace('{{noofparticipants}}', $noofparticipants, $body1);
+$body1 = str_replace('{{implementationpackage}}', $implementationpackage, $body1);
 
 $mail->SMTPAuth = false;
 $mail->SMTPSecure = false;
 $mail->Host       = 'relay-hosting.secureserver.net'; // sets the SMTP server
 $mail->Port       = 25; //25;       //465             // set the SMTP port for the GMAIL server
+
+// Set the content-type header for sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 $mail1->AddReplyTo("info@givemefive.cloud","Givemefive");
 $mail1->SetFrom($_POST['admin_email'], $_POST['name']);
