@@ -2550,6 +2550,7 @@
     padding: 56px;
     border-radius: 24px;
     background: #9FE2D9;
+    position: relative;
    }
 
    .subscription_form .row{
