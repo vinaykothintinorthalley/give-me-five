@@ -4,9 +4,18 @@
 require_once('class.phpmailer.php');
 
 $mail = new PHPMailer(); // defaults to using php "mail()"
+
+$noofparticipants = htmlspecialchars($_POST['no_of_participants']);
+$package = htmlspecialchars($_POST['implementation_package']);
+$adminemail =  $_POST['admin_email'];
 //Sent to User    
 $body = file_get_contents('subsription_template.html');
 //$body = eregi_replace("[\]",'',$body);
+
+// Replace placeholders with actual data
+$body = str_replace('{{noofparticipants}}', $noofparticipants, $body);
+$body = str_replace('{{package}}', $package, $body);
+$body = str_replace('{{adminemail}}', $adminemail, $body);
 
 //$mail->SMTPAuth   = true;                  // enable SMTP authentication
 
@@ -15,6 +24,9 @@ $mail->SMTPSecure = false;
 $mail->Host       = 'relay-hosting.secureserver.net'; // sets the SMTP server
 $mail->Port       = 25; //25;       //465             // set the SMTP port for the GMAIL server
 
+// Set the content-type header for sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 $mail->AddReplyTo("info@givemefive.cloud","Givemefive");
 $mail->SetFrom("info@givemefive.cloud","Givemefive");
