@@ -101,7 +101,7 @@ $(document).ready(function () {
         },
         no_of_participants: {
           required: !0,
-          minlength: 2
+          minlength: 1
         },
         implementation_package: {
           required: true
