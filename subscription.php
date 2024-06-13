@@ -5,6 +5,7 @@ require_once('class.phpmailer.php');
 
 $mail = new PHPMailer(); // defaults to using php "mail()"
 
+$subscriberorganization = htmlspecialchars($_POST['subscriber_organization']);
 $noofparticipants = htmlspecialchars($_POST['no_of_participants']);
 $package = htmlspecialchars($_POST['implementation_package']);
 $adminemail =  $_POST['admin_email'];
@@ -13,6 +14,7 @@ $body = file_get_contents('subsription_template.html');
 //$body = eregi_replace("[\]",'',$body);
 
 // Replace placeholders with actual data
+$body = str_replace('{{subscriberorganization}}', $subscriberorganization, $body);
 $body = str_replace('{{noofparticipants}}', $noofparticipants, $body);
 $body = str_replace('{{package}}', $package, $body);
 $body = str_replace('{{adminemail}}', $adminemail, $body);
