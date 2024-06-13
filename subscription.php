@@ -29,7 +29,7 @@ $no_of_participants =  $_POST['no_of_participants'];
 $implementation_package =  $_POST['implementation_package'];
 
 
-$mail->AddAddress($address, $name);
+$mail->AddAddress($admin_email, $administrator_details);
 
 $mail->Subject    = "A message from Givemefive subscription form";
 $mail->MsgHTML($body);
@@ -53,18 +53,14 @@ $mail->Host       = 'relay-hosting.secureserver.net'; // sets the SMTP server
 $mail->Port       = 25; //25;       //465             // set the SMTP port for the GMAIL server
 
 $mail1->AddReplyTo("info@givemefive.cloud","Givemefive");
-$mail1->SetFrom($_POST['email'], $_POST['name']);
+$mail1->SetFrom($_POST['admin_email'], $_POST['name']);
 
 $address1 =  'info@givemefive.cloud';
-$name1 =  $_POST['name'];
+$name1 =  $_POST['administrator_details'];
 $mail1->AddAddress($address1, $name1);
 
 $mail1->Subject    = "A Message From Givemefive subscription Form";
 $mail1->MsgHTML($body1);
-
-
-
-
 
 	if($mail->Send() && $mail1->Send()) {
 		 $response["status"] = "success";
