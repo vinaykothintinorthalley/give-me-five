@@ -89,3 +89,24 @@ function submitForm(){
     
     }
  }
+
+ // JavaScript to handle the copy functionality
+ document.getElementById('copyButton').addEventListener('click', function() {
+  // Create a temporary textarea element
+  var tempInput = document.createElement('textarea');
+  tempInput.value = document.getElementById('textToCopy').innerText;
+  document.body.appendChild(tempInput);
+
+  // Select the text field
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  document.execCommand('copy');
+
+  // Remove the temporary textarea
+  document.body.removeChild(tempInput);
+
+  // Optional: Alert the copied text
+  //alert('Copied the text: ' + tempInput.value);
+});
