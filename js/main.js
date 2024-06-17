@@ -121,3 +121,12 @@ document.getElementById('linkedinShareButton').addEventListener('click', functio
   
   window.open(shareUrl, 'linkedinShareWindow', 'height=450,width=550,top=' + (screen.height / 2 - 225) + ',left=' + (screen.width / 2 - 275) + ',toolbar=0,location=0,menubar=0,directories=0,scrollbars=0');
 });
+
+// JavaScript to handle the Facebook share functionality
+document.getElementById('fbshareButton').addEventListener('click', function() {
+  // Use the Facebook share dialog to share the current page
+  FB.ui({
+      method: 'share',
+      href: window.location.href
+  }, function(response){});
+});
