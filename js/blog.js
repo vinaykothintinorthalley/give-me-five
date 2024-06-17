@@ -38,3 +38,14 @@ document.getElementById('fbshareButton').addEventListener('click', function() {
       href: window.location.href
   }, function(response){});
 });
+
+// JavaScript to handle the Twitter share functionality
+document.getElementById('twitterShareButton').addEventListener('click', function() {
+  var url = encodeURIComponent(window.location.href); // The URL to share
+  var text = encodeURIComponent("Give Me Five | Blog"); // The text to include in the tweet
+  
+  var twitterUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  
+  // Open the Twitter share URL in a new window
+  window.open(twitterUrl, '_blank', 'width=600,height=400');
+});
