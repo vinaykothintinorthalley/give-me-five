@@ -1970,7 +1970,8 @@
 
   .our_features_wrapper{
     padding: 140px 100px 200px 100px;
-    margin-top: -48px;
+    margin-top: -24px;
+    position: relative;
   }
 
   .our_features_container .col-lg-12 h3{
