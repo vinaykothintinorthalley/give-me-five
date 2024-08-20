@@ -529,6 +529,28 @@ right: -20px;}
 
 .kelmscott_john_wrapper .case_details_heading .logo_wrap img{height: 56px;}
 
+.warrah_wrapper{background: url(../img/warrah-mobile-banner-img.png) no-repeat;
+    background-size: cover;background-position: center top;}
+
+.impact_disability_wrapper{background: url(../img/impact-disability-mobile-banner-img.png) no-repeat;
+        background-size: cover;background-position: center top;}
+
+.impact_homecare_wrapper{background: url(../img/impact-home-care-banner-mobile-img.png) no-repeat;
+    background-size: cover;background-position: center top;}
+
+.case_details_heading .impact_logo{width: auto;}
+
+.impact_disability_wrapper .case_details_heading{align-items: flex-start;}
+
+.impact_homecare_wrapper .case_details_heading{align-items: flex-start;}
+
+.moretext{display: none;}
+
+.case_details_heading .warrah_logo_wrap{padding: 11px 30px 11px 30px;width: 246px;}
+
+.case_details_heading .moreless-button{color: #fff;text-decoration: none;font-size: 20px;
+    font-weight: 600;font-family: var(--generalsans-600-font);}
+
 .pricing_container{padding-left: 10.5px;padding-right: 10.5px;padding-bottom: 100px;}
 
 .pricing_heading{margin-bottom: 36px;padding-left: 32px;padding-right: 32px;}
@@ -668,6 +690,12 @@ align-items: flex-start;width: 100%;}
 
 .written_by_content{flex-direction: column;}
 
+.safe_space_wrapper{padding: 0px 32px 60px 32px;}
+
+.safe_space_content h3{font-size: 40px;margin-bottom: 24px;}
+
+.safe_space_content p{width: 100%;margin-bottom: 36px;}
+
 
 }
 
@@ -712,7 +740,7 @@ align-items: flex-start;width: 100%;}
 
 .about_page_wrapper .about_product_wrapper{min-height: 2370px;}
 
-.about_page_wrapper .team_wrapper{min-height: 4490px;}
+.about_page_wrapper .team_wrapper{min-height: 3670px;}
 
 .inner_testimonials_wrapper{min-height: 948px;}
 
@@ -772,6 +800,8 @@ align-items: flex-start;width: 100%;}
 
 .give_me_five_wrapper .our_features_wrapper{min-height: 1232px;}
 
+.about_page_wrapper .team_wrapper{min-height: 3800px;}
+
 }
 
 /*  Resolutions below 360px  */
@@ -782,6 +812,10 @@ align-items: flex-start;width: 100%;}
 .product_text h5{font-size: 18px;line-height: 118%;}
 
 .product_text p{font-size: 14px;line-height: 138%;}
+
+.about_page_wrapper .about_product_wrapper{min-height: 2184px;}
+
+.about_page_wrapper .team_wrapper {min-height: 3890px;}
 
 .case_studies_heading h3{font-size: 56px;line-height: 112%;}
 
@@ -823,7 +857,7 @@ align-items: flex-start;width: 100%;}
 
 .timeline_wrapper{min-height: 2740px;}
 
-.team_wrapper{min-height: 2830px;}
+.team_wrapper{min-height: 2440px;}
 
 .case_studies_card_wrapper{min-height: 785px;}
 
@@ -837,7 +871,7 @@ align-items: flex-start;width: 100%;}
 
 .timeline_wrapper{min-height: 2890px;}
 
-.team_wrapper{min-height: 2920px;}
+.team_wrapper{min-height: 2510px;}
 
 .case_studies_card_wrapper{min-height: 812px;}
 
@@ -848,7 +882,7 @@ align-items: flex-start;width: 100%;}
 
 .timeline_wrapper{min-height: 3144px;}
 
-.team_wrapper{min-height: 2989px;}
+.team_wrapper{min-height: 2580px;}
 
 .case_studies_card_wrapper{min-height: 860px;}
     
